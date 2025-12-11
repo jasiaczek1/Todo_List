@@ -25,10 +25,10 @@ C#
 
 Struktura projektu
 Todo_List/
-│
+
 ├── Commands/
-│   └── RelayCommand.cs         Komenda wykorzystywana w MVVM.
-│
+    └── RelayCommand.cs         Komenda wykorzystywana w MVVM.
+    
 ├── Data/
 │   └── AppDbContext.cs         Konfiguracja EF Core i definicja tabel.
 │
