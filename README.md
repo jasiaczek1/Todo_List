@@ -96,3 +96,55 @@ Baza todo.db zostanie automatycznie utworzona w katalogu bin.
 * Kliknij "Usuń", aby usunąć wybrane zadanie.
 
 * Zmiany zapisują się automatycznie w SQLite.
+
+# DOKUMENTACJA TECHNICZNA
+## Architektura
+
+### Warstwy:
+
+* Models
+* Definiują encje bazodanowe mapowane przez EF Core.
+* TodoItem zawiera: Id, Title, Description, Date.
+
+### Data
+* AppDbContext zarządza połączeniem z SQLite oraz tworzy tabelę TodoItems.
+
+### Services
+* Logika biznesowa komunikująca się z bazą danych.
+* TodoService implementuje CRUD.
+
+### ViewModels
+* Logika dla widoków (UI).
+* MainViewModel pobiera dane z TodoService i wystawia je do bindingu.
+
+### Views
+* XAML + minimalny code-behind ograniczony do inicjalizacji.
+
+## Przepływ danych
+
+* UI wywołuje komendę (RelayCommand).
+
+* Komenda uruchamia metodę w ViewModel.
+
+* ViewModel korzysta z serwisu (ITodoService).
+
+* Serwis wykonuje operacje na SQLite przez AppDbContext.
+
+* Wyniki są odświeżane w observable kolekcji bindowanej z UI.
+## Kontekst bazy danych
+### AppDbContext tworzy tabelę:
+```vbnet
+TodoItems(
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Title TEXT,
+    Description TEXT,
+    Date TEXT
+)
+```
+## Migracje
+
+### Jeżeli potrzebujesz migracji:
+```pgsql
+Add-Migration Init
+Update-Database
+```
