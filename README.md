@@ -27,32 +27,32 @@ Struktura projektu
 Todo_List/
 
 ├── Commands/
-    └── RelayCommand.cs         Komenda wykorzystywana w MVVM.
+└── RelayCommand.cs         Komenda wykorzystywana w MVVM.
     
 ├── Data/
-│   └── AppDbContext.cs         Konfiguracja EF Core i definicja tabel.
-│
+└── AppDbContext.cs         Konfiguracja EF Core i definicja tabel.
+
 ├── Migrations/
-│   └── ...                     Migracje EF Core (jeśli utworzone).
-│
+└── ...                     Migracje EF Core (jeśli utworzone).
+
 ├── Models/
-│   └── TodoItem.cs             Model ORM mapowany do tabeli SQLite.
-│
+└── TodoItem.cs             Model ORM mapowany do tabeli SQLite.
+
 ├── Services/
-│   ├── ITodoService.cs         Abstrakcja logiki danych.
-│   └── TodoService.cs          Implementacja operacji CRUD.
-│
+├── ITodoService.cs         Abstrakcja logiki danych.
+└── TodoService.cs          Implementacja operacji CRUD.
+
 ├── ViewModels/
-│   ├── ViewModelBase.cs        Implementacja INotifyPropertyChanged.
-│   ├── MainViewModel.cs        Logika głównego okna: listy zadań.
-│   └── TaskItemViewModel.cs    ViewModel pojedynczego zadania.
-│
+├── ViewModelBase.cs        Implementacja INotifyPropertyChanged.
+├── MainViewModel.cs        Logika głównego okna: listy zadań.
+└── TaskItemViewModel.cs    ViewModel pojedynczego zadania.
+
 ├── Views/
-│   ├── MainWindow.xaml         Główne UI.
-│   ├── MainWindow.xaml.cs      Kod-behind ograniczony do inicjalizacji.
-│   ├── TaskEditorWindow.xaml   UI edytora zadania.
-│   └── TaskEditorWindow.xaml.cs VM edytora zadania.
-│
+├── MainWindow.xaml         Główne UI.
+├── MainWindow.xaml.cs      Kod-behind ograniczony do inicjalizacji.
+├── TaskEditorWindow.xaml   UI edytora zadania.
+└── TaskEditorWindow.xaml.cs VM edytora zadania.
+
 ├── App.xaml                    Konfiguracja aplikacji.
 └── App.xaml.cs                 Inicjalizacja kontekstu i serwisów.
 
