@@ -142,8 +142,6 @@ TodoItems(
 )
 ```
 ## Migracje
-
-### Jeżeli potrzebujesz migracji:
 ```pgsql
 Add-Migration Init
 Update-Database
