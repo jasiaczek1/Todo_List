@@ -1,7 +1,7 @@
 README.md
 # Todo_List
 
-Aplikacja desktopowa WPF, wykorzystująca Entity Framework Core oraz SQLite do prostego zarządzania listą zadań.
+* Aplikacja desktopowa WPF, wykorzystująca Entity Framework Core oraz SQLite do prostego zarządzania listą zadań.
 
 # Funkcje
 
