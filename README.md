@@ -141,8 +141,3 @@ TodoItems(
     Date TEXT
 )
 ```
-## Migracje
-```pgsql
-Add-Migration Init
-Update-Database
-```
